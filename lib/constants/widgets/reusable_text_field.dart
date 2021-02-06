@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 class ReusableTextField extends StatelessWidget {
   final String label;
   final TextEditingController controller;
+  final bool secure;
 
-  const ReusableTextField({
-    @required this.label,
-    @required this.controller,
-  });
+  const ReusableTextField(
+      {@required this.label, @required this.controller, @required this.secure});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      obscureText: secure,
       controller: controller,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(6),

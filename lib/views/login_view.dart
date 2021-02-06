@@ -33,6 +33,7 @@ class LoginView extends GetView<RegisterController> {
                   height: 40,
                 ),
                 ReusableTextField(
+                  secure: false,
                   label: 'email'.tr,
                   controller: emailController,
                 ),
@@ -40,6 +41,7 @@ class LoginView extends GetView<RegisterController> {
                   height: 15,
                 ),
                 ReusableTextField(
+                  secure: true,
                   label: 'password'.tr,
                   controller: passwordController,
                 ),
